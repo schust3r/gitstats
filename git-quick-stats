@@ -301,8 +301,8 @@ if [ $# -eq 1 ]
         "detailedGitStats")
            _since="${_GIT_SINCE:-}";
            _until="${_GIT_UNTIL:-}";
-           while [ -z "$_since" ]; do read -p "Start date? (yyyy-dd-mm) " _since; done
-           while [ -z "$_until" ]; do read -p "End date? (yyyy-dd-mm) " _until; done
+           while [ -z "$_since" ]; do read -p "Start date? (yyyy-mm-dd) " _since; done
+           while [ -z "$_until" ]; do read -p "End date? (yyyy-mm-dd) " _until; done
            _since="--since=$_since";
            _until="--until=$_until";
            detailedGitStats
@@ -374,8 +374,8 @@ while [ opt != '' ]
         1)           
            _since='';
            _until='';
-           while [ -z "$_since" ]; do read -p "Start date? (yyyy-dd-mm) " _since; done
-           while [ -z "$_until" ]; do read -p "End date? (yyyy-dd-mm) " _until; done
+           while [ -z "$_since" ]; do read -p "Start date? (yyyy-mm-dd) " _since; done
+           while [ -z "$_until" ]; do read -p "End date? (yyyy-mm-dd) " _until; done
            _since="--since=$_since";
            _until="--until=$_until";
            detailedGitStats
